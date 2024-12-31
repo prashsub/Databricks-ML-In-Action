@@ -38,7 +38,7 @@
 
 from databricks.vector_search.client import VectorSearchClient
 
-vsc_endpoint_name = "one-env-shared-endpoint-1"#"ml_action_vs"
+vsc_endpoint_name = "one-env-shared-endpoint-10"#"ml_action_vs"
 vsc = VectorSearchClient()
 
 # SIDE NOTE - experience strange behaviour with the Index re-provisioning 

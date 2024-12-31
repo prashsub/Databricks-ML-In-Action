@@ -93,9 +93,15 @@ display(sql(f"SELECT * FROM {table_name} LIMIT 2"))
 # COMMAND ----------
 
 # DBTITLE 1,Basic extracting
+import nltk
+
+# Download the required NLTK resources
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger_eng')
+
 with open(f"{documents_folder}2303.10130.pdf", mode="rb") as pdf:
-  doc = extract_doc_text(pdf.read())  
-  print(doc)
+    doc = extract_doc_text(pdf.read())  
+    print(doc)
 
 # COMMAND ----------
 

@@ -106,20 +106,20 @@ prep_data2delta(
 # MAGIC %sql 
 # MAGIC -- you can set up a widget to a notebook and consume widgets via $ variables with SQL
 # MAGIC --OPTIMIZE delta.`/Volumes/$catalog/$database_name/files/intel_image_clf/valid_imgs_main.delta`
-# MAGIC OPTIMIZE delta.`/Volumes/ml_in_action/cv_clf/files/intel_image_clf/train_imgs_main.delta`
+# MAGIC OPTIMIZE delta.`/Volumes/prashanth_ml_in_action/cv_clf/files/intel_image_clf/train_imgs_main.delta`
 
 # COMMAND ----------
 
 # MAGIC %sql 
-# MAGIC OPTIMIZE delta.`/Volumes/ml_in_action/cv_clf/files/intel_image_clf/valid_imgs_main.delta`
+# MAGIC OPTIMIZE delta.`/Volumes/prashanth_ml_in_action/cv_clf/files/intel_image_clf/valid_imgs_main.delta`
 
 # COMMAND ----------
 
 # MAGIC %sql 
-# MAGIC ALTER TABLE delta.`/Volumes/ml_in_action/cv_clf/files/intel_image_clf/train_imgs_main.delta` SET TBLPROPERTIES ('delta.enableDeletionVectors' = false);
-# MAGIC ALTER TABLE delta.`/Volumes/ml_in_action/cv_clf/files/intel_image_clf/valid_imgs_main.delta` SET TBLPROPERTIES ('delta.enableDeletionVectors' = false);
+# MAGIC ALTER TABLE delta.`/Volumes/prashanth_ml_in_action/cv_clf/files/intel_image_clf/train_imgs_main.delta` SET TBLPROPERTIES ('delta.enableDeletionVectors' = false);
+# MAGIC ALTER TABLE delta.`/Volumes/prashanth_ml_in_action/cv_clf/files/intel_image_clf/valid_imgs_main.delta` SET TBLPROPERTIES ('delta.enableDeletionVectors' = false);
 
 # COMMAND ----------
 
 # MAGIC %sql 
-# MAGIC SELECT * FROM delta.`/Volumes/ml_in_action/cv_clf/files/intel_image_clf/valid_imgs_main.delta`
+# MAGIC SELECT * FROM delta.`/Volumes/prashanth_ml_in_action/cv_clf/files/intel_image_clf/valid_imgs_main.delta`

@@ -18,6 +18,8 @@ def build_autoloader_stream():
 def generate_table():
   table_name = spark.conf.get('table_name')
   @dlt.table(name=f'{table_name}',table_properties={"quality":"bronze"})
+  @dlt.expect_or_drop("valid_CustomerID","CustomerID IS NOT NULL")
+  @dlt.expect("valid_Product", "Product IS NOT NULL")
   def create_table(): 
     return build_autoloader_stream()
 

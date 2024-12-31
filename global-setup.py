@@ -47,9 +47,9 @@ current_user_no_at = re.sub(r'\W+', '_', current_user_no_at)
 # Set the UC catalog based on the isolation environment
 env = dbutils.widgets.get("env")
 if env=="dev":
-  catalog = "ml_in_action"
+  catalog = "prashanth_ml_in_action"
 elif env=="prod":
-  catalog = "ml_in_prod"  
+  catalog = "prashanth_ml_in_prod"  
 
 # Set the database
 db = dbutils.widgets.get("db")
@@ -105,8 +105,8 @@ print(f"use volume_model_path {volume_model_path}")
 
 import os
 
-os.environ["KAGGLE_USERNAME"] = dbutils.secrets.get("machine-learning-in-action", "kaggle_username")
-os.environ["KAGGLE_KEY"] = dbutils.secrets.get("machine-learning-in-action", "kaggle_key")
+os.environ["KAGGLE_USERNAME"] = dbutils.secrets.get("prashanth-subrahmanyam-scope", "kaggle_username")
+os.environ["KAGGLE_KEY"] = dbutils.secrets.get("prashanth-subrahmanyam-scope", "kaggle_key")
 
 # COMMAND ----------
 

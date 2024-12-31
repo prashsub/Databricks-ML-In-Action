@@ -27,5 +27,11 @@
 # COMMAND ----------
 
 import seaborn as sns
-g = sns.PairGrid(spark.table('synthetic_transactions').toPandas()[['CustomerID','Amount', 'Product','Label']], diag_sharey=False, hue="Label")
+
+# Check the schema of the DataFrame
+df = spark.table('synthetic_transactions').toPandas()
+print(df.columns)
+
+# Adjust the column names if necessary
+g = sns.PairGrid(df[['CustomerID', 'Amount',  'Label']], diag_sharey=False, hue="Label")
 g.map_lower(sns.kdeplot).map_diag(sns.kdeplot, lw=3).map_upper(sns.regplot).add_legend()

@@ -11,6 +11,10 @@
 
 # COMMAND ----------
 
+dbutils.library.restartPython()
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC ## Run Setup
 
@@ -36,8 +40,13 @@ dbutils.fs.mkdirs(raw_data_path)
 
 import opendatasets as od
 
-od.download("https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data",raw_data_path)
+dataset_url = "https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data"
 
+
+
+# COMMAND ----------
+
+od.download("https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data",raw_data_path)
 
 # COMMAND ----------
 
